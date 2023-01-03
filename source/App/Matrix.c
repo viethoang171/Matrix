@@ -160,7 +160,7 @@ void_t main()
         printf("\nSo luong so 0 trong mang 2 chieu la: %d", dwResult);
         break;
     case SUNDAY:
-        dwResult = Count_one_Array(dwBuffer, &dwRow, &dwColumn);
+        dwResult = countOneArray(dwBuffer, &dwRow, &dwColumn);
         printf("\nSo luong so 1 trong mang 2 chieu la: %d", dwResult);
         break;
     }
