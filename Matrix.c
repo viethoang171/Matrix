@@ -70,6 +70,7 @@ void_t Request();
 ******************************************************************************/
 void_t main()
 {
+    Request();
     u32_t dw_Buffer[MAX_N][MAX_N];
     u32_t dw_Row, dw_Column;
     Input_Array(dw_Buffer, &dw_Row, &dw_Column);
