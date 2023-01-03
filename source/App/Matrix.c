@@ -61,69 +61,124 @@ typedef enum
 /*                            EXPORTED FUNCTIONS                              */
 /******************************************************************************/
 
-/******************************************************************************
-                           Function input mang 2 chieu
-******************************************************************************/
+/**
+ * @func inputArray
+ * @brief Input 2-dimension Array
+ *
+ * @param [pdwBuffer] : 2-dimension Array
+ * @param [pdwRow] : The number of rows in Array
+ * @param [pdwColumn]: The number of columns in Array
+ * @retval None
+ */
 void_t inputArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
-/******************************************************************************
-                           Function output mang 2 chieu
-******************************************************************************/
+/**
+ * @func ouputArray
+ * @brief Output 2-dimension Array
+ * @param [pdwBuffer] : 2-dimension Array
+ * @param [pdwRow] : The number of rows in Array
+ * @param [pdwColumn]: The number of columns in Array
+ * @retval None
+ */
 void_t outputArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
-/******************************************************************************
-                           Function kiem tra xem co phai so nguyen to khong?
-******************************************************************************/
+/**
+ * @func outputArray
+ * @brief Output 2-dimension Array
+ * @param [pdwBuffer] : 2-dimension Array
+ * @param [pdwRow] : The number of rows in Array
+ * @param [pdwColumn]: The number of columns in Array
+ * @retval None
+ */
 u32_t checkPrime(u32_t dwPrime);
 
-/******************************************************************************
-                           Function dem so luong so nguyen to trong mang 2 chieu
-******************************************************************************/
+/**
+ * @func checkPrime
+ * @brief Kiem tra so truyen vao co phai so nguyen to khong
+ * @param [pdwColumn]: The number of column in Array
+ * @retval u32_t
+ */
 u32_t countPrimeArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
-/******************************************************************************
-                           Function dem so luong so chinh phuong trong mang 2 chieu
-******************************************************************************/
+/**
+ * @func countPrimeArray
+ * @brief Dem so luong so nguyen to trong mang 2 chieu
+ * @param [pdwBuffer] : 2-dimension Array
+ * @param [pdwRow] : The number of rows in Array
+ * @param [pdwColumn]: The number of columns in Array
+ * @retval u32_t
+ */
 
 u32_t countPerfectSquareArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
-/******************************************************************************
-                           Function dem so luong so hoan hao trong mang 2 chieu
-******************************************************************************/
+/**
+ * @func countPerfectSquareArray
+ * @brief Dem so luong so chinh phuong trong mang 2 chieu
+ * @param [pdwBuffer] : 2-dimension Array
+ * @param [pdwRow] : The number of rows in Array
+ * @param [pdwColumn]: The number of columns in Array
+ * @retval u32_t
+ */
 u32_t countPerfectArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
-/******************************************************************************
-                           Function dem so luong chan trong mang 2 chieu
-******************************************************************************/
+/**
+ * @func countPerfectArray
+ * @brief Dem so luong so hoan hao trong mang 2 chieu
+ * @param [pdwBuffer] : 2-dimension Array
+ * @param [pdwRow] : The number of rows in Array
+ * @param [pdwColumn]: The number of columns in Array
+ * @retval u32_t
+ */
 
 u32_t countEvenArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
-/******************************************************************************
-                           Function dem so luong so le trong mang 2 chieu
-******************************************************************************/
-
+/**
+ * @func countPerfectArray
+ * @brief Dem so luong so hoan hao trong mang 2 chieu
+ * @param [pdwBuffer] : 2-dimension Array
+ * @param [pdwRow] : The number of rows in Array
+ * @param [pdwColumn]: The number of columns in Array
+ * @retval u32_t
+ */
 u32_t countOddArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
-/******************************************************************************
-                           Function dem so luong so 0 trong mang 2 chieu
-******************************************************************************/
+/**
+ * @func countOddArray
+ * @brief Dem so luong so le trong mang 2 chieu
+ * @param [pdwBuffer] : 2-dimension Array
+ * @param [pdwRow] : The number of rows in Array
+ * @param [pdwColumn]: The number of columns in Array
+ * @retval u32_t
+ */
 
 u32_t countZeroArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
-/******************************************************************************
-                           Function dem so luong so 1 trong mang 2 chieu
-******************************************************************************/
+/**
+ * @func countZeroArray
+ * @brief Dem so luong so 0 trong mang 2 chieu
+ * @param [pdwBuffer] : 2-dimension Array
+ * @param [pdwRow] : The number of rows in Array
+ * @param [pdwColumn]: The number of columns in Array
+ * @retval u32_t
+ */
 
 u32_t countOneArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
-/******************************************************************************
-                           Function printf yeu cau bai toan
-******************************************************************************/
+/**
+ * @func countOneArray
+ * @brief Dem so luong so 1 trong mang 2 chieu
+ * @param [pdwBuffer] : 2-dimension Array
+ * @param [pdwRow] : The number of rows in Array
+ * @param [pdwColumn]: The number of columns in Array
+ * @retval u32_t
+ */
 void_t request(u32_p pdwDay);
-
-/******************************************************************************
-                           Ham Main
-******************************************************************************/
+/**
+ * @func countOneArray
+ * @brief Nhan request tu user de nhap mang 2 chieu va xu ly
+ * @param [pdwDay] : ngay trong tuan duoc nhap tu user
+ * @retval None
+ */
 void_t main()
 {
     u32_t dwDay;
