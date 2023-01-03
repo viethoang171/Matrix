@@ -7,8 +7,8 @@
                 |   |       |   |   |   | |   |   |   |   |   | |   |
                 |   |_ _ _  |   |_ _|   | |   |   |   |   |   | |   |
                 |_ _ _ _ _| |_ _ _ _ _ _| |_ _|   |_ _|   |_ _| |_ _|
-                                (C)2021 Lumi
- * Copyright (c) 2021
+                                (C)2023 Lumi
+ * Copyright (c) 2023
  * Lumi, JSC.
  * All Rights Reserved
  *
@@ -16,11 +16,11 @@
  *
  * Description: This code is used for tranning Lumi IOT member. It is the code form statandard.
  *
- * Author: PhuongNP
+ * Author: HoangNV
  *
- * Last Changed By:  $Author: phuongnp $
+ * Last Changed By:  $Author: hoangnv $
  * Revision:         $Revision: $
- * Last Changed:     $Date: $Jun 9, 2021
+ * Last Changed:     $Date: $Jan 3, 2023
   ******************************************************************************/
 /******************************************************************************/
 /*                              INCLUDE FILES                                 */
@@ -327,7 +327,7 @@ u32_t Count_perfect_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Co
                 if (pdw_Buffer[i][j] % k == 0)
                     dw_sum_divisor += pdw_Buffer[i][j];
             }
-            if (dw_sum_divisor == pdw_Buffer[i][j]) // Kiem tra tong cac uoc cua so do cos bang so do khong?
+            if (dw_sum_divisor == pdw_Buffer[i][j]) // Kiem tra tong cac uoc cua so do co bang so do khong?
                 dw_Count_perfect++;
         }
     }

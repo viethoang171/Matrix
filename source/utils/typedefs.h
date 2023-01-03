@@ -7,8 +7,8 @@
                 |   |       |   |   |   | |   |   |   |   |   | |   |
                 |   |_ _ _  |   |_ _|   | |   |   |   |   |   | |   |
                 |_ _ _ _ _| |_ _ _ _ _ _| |_ _|   |_ _|   |_ _| |_ _|
-                                (C)2021 Lumi
- * Copyright (c) 2021
+                                (C)2023 Lumi
+ * Copyright (c) 2023
  * Lumi, JSC.
  * All Rights Reserved
  *
