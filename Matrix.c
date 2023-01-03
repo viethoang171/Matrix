@@ -128,31 +128,31 @@ void_t Output_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
     }
 }
 
-u32_t Check_Prime(u32_t prime)
+u32_t Check_Prime(u32_t dw_prime)
 {
-    if (prime == 2) // Neu la so 2 thi chung to la so nguyen to luon
+    if (dw_prime == 2) // Neu la so 2 thi chung to la so nguyen to luon
         return 1;
-    u32_t sqrt_prime = sqrt(prime); // Lay can bac 2 cua so can kiem tra
-    for (u32_t i = 2; i <= sqrt(prime); i++)
-        if (prime % i == 0)
+    u32_t dw_sqrt_prime = sqrt(dw_prime); // Lay can bac 2 cua so can kiem tra
+    for (u32_t i = 2; i <= sqrt(dw_prime); i++)
+        if (dw_prime % i == 0)
             return 1;
     return 0;
 }
 
 u32_t Count_prime_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
 {
-    u32_t Count_prime = 0;
+    u32_t dw_Count_prime = 0;
     for (u32_t i = 0; i < *pdw_Row; i++)
     {
         for (u32_t j = 0; j < *pdw_Column; j++)
         {
             if (Check_Prime(pdw_Buffer[i][j]) != 0)
             {
-                Count_prime++;
+                dw_Count_prime++;
             }
         }
     }
-    return Count_prime;
+    return dw_Count_prime;
 }
 
 void_t Request()
