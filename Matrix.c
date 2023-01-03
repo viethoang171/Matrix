@@ -41,6 +41,39 @@ typedef void void_t;
 /*                            EXPORTED FUNCTIONS                              */
 /******************************************************************************/
 
+/******************************************************************************
+                           Function input mang 2 chieu
+******************************************************************************/
+void_t Input_Array(u32_t pdwBuffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
+
+/******************************************************************************
+                           Function output mang 2 chieu
+******************************************************************************/
+void_t Output_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
+
+/******************************************************************************
+                           Function kiem tra xem co phai so nguyen to khong?
+******************************************************************************/
+u32_t Check_Prime(u32_t prime);
+
+/******************************************************************************
+                           Function dem so luong so nguyen to trong mang 2 chieu
+******************************************************************************/
+u32_t Count_prime_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
+
+/******************************************************************************
+                           Ham Main
+******************************************************************************/
+void_t main()
+{
+    u32_t dw_Buffer[MAX_N][MAX_N];
+    u32_t dw_Row, dw_Column;
+    Input_Array(dw_Buffer, &dw_Row, &dw_Column);
+    Output_Array(dw_Buffer, &dw_Row, &dw_Column);
+    u32_t Count_prime = Count_prime_Array(dw_Buffer, &dw_Row, &dw_Column);
+    printf("\nSo luong so nguyen to trong mang 2 chieu la:  %d", Count_prime);
+}
+
 void_t Input_Array(u32_t pdwBuffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
 {
     // Input number of rows and check
@@ -77,6 +110,7 @@ void_t Input_Array(u32_t pdwBuffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
         }
     }
 }
+
 void_t Output_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
 {
     for (u32_t i = 0; i < *pdw_Row; i++)
@@ -88,6 +122,7 @@ void_t Output_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
         printf("\n\n");
     }
 }
+
 u32_t Check_Prime(u32_t prime)
 {
     if (prime == 2) // Neu la so 2 thi chung to la so nguyen to luon
@@ -98,6 +133,7 @@ u32_t Check_Prime(u32_t prime)
             return 1;
     return 0;
 }
+
 u32_t Count_prime_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
 {
     u32_t Count_prime = 0;
@@ -112,13 +148,4 @@ u32_t Count_prime_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Colu
         }
     }
     return Count_prime;
-}
-void_t main()
-{
-    u32_t dw_Buffer[MAX_N][MAX_N];
-    u32_t dw_Row, dw_Column;
-    Input_Array(dw_Buffer, &dw_Row, &dw_Column);
-    Output_Array(dw_Buffer, &dw_Row, &dw_Column);
-    u32_t Count_prime = Count_prime_Array(dw_Buffer, &dw_Row, &dw_Column);
-    printf("\nSo luong so nguyen to trong mang 2 chieu la:  %d", Count_prime);
 }
