@@ -62,6 +62,10 @@ u32_t Check_Prime(u32_t prime);
 u32_t Count_prime_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
 
 /******************************************************************************
+                           Function printf yeu cau bai toan
+******************************************************************************/
+void_t Request();
+/******************************************************************************
                            Ham Main
 ******************************************************************************/
 void_t main()
@@ -148,4 +152,12 @@ u32_t Count_prime_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Colu
         }
     }
     return Count_prime;
+}
+
+void_t Request()
+{
+    printf("Tao 1 mang 2 chieu gom cac phan tu so nguyen khong dau\n");
+    printf("Xuat ra man hinh mang 2 chieu vua tao\n");
+    printf("Kiem tra mang 2 chieu co bao nhieu so nguyen to?\n");
+    printf("Xuat ra man hinh so luong so nguyen to trong  mang");
 }
