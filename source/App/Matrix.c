@@ -44,7 +44,7 @@ typedef enum
     FRIDAY,
     SATURDAY,
     SUNDAY
-} Day_on_week;
+} DayOnWeek;
 /******************************************************************************/
 /*                              PRIVATE DATA                                  */
 /******************************************************************************/
@@ -64,138 +64,138 @@ typedef enum
 /******************************************************************************
                            Function input mang 2 chieu
 ******************************************************************************/
-void_t Input_Array(u32_t pdwBuffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
+void_t inputArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
 /******************************************************************************
                            Function output mang 2 chieu
 ******************************************************************************/
-void_t Output_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
+void_t outputArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
 /******************************************************************************
                            Function kiem tra xem co phai so nguyen to khong?
 ******************************************************************************/
-u32_t Check_Prime(u32_t dw_prime);
+u32_t checkPrime(u32_t dwPrime);
 
 /******************************************************************************
                            Function dem so luong so nguyen to trong mang 2 chieu
 ******************************************************************************/
-u32_t Count_prime_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
+u32_t countPrimeArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
 /******************************************************************************
                            Function dem so luong so chinh phuong trong mang 2 chieu
 ******************************************************************************/
 
-u32_t Count_perfect_square_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
+u32_t countPerfectSquareArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
 /******************************************************************************
                            Function dem so luong so hoan hao trong mang 2 chieu
 ******************************************************************************/
-u32_t Count_perfect_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
+u32_t countPerfectArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
 /******************************************************************************
                            Function dem so luong chan trong mang 2 chieu
 ******************************************************************************/
 
-u32_t Count_even_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
+u32_t countEvenArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
 /******************************************************************************
                            Function dem so luong so le trong mang 2 chieu
 ******************************************************************************/
 
-u32_t Count_odd_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
+u32_t countOddArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
 /******************************************************************************
                            Function dem so luong so 0 trong mang 2 chieu
 ******************************************************************************/
 
-u32_t Count_zero_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
+u32_t countZeroArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
 /******************************************************************************
                            Function dem so luong so 1 trong mang 2 chieu
 ******************************************************************************/
 
-u32_t Count_one_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column);
+u32_t countOneArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn);
 
 /******************************************************************************
                            Function printf yeu cau bai toan
 ******************************************************************************/
-void_t Request();
+void_t request(u32_p pdwDay);
 
 /******************************************************************************
                            Ham Main
 ******************************************************************************/
 void_t main()
 {
-    u32_t dw_day;
-    Request(&dw_day);
-    u32_t dw_Buffer[MAX_N][MAX_N];
-    u32_t dw_Row, dw_Column;
-    Input_Array(dw_Buffer, &dw_Row, &dw_Column);
-    Output_Array(dw_Buffer, &dw_Row, &dw_Column);
-    u32_t dw_Result;
-    switch (dw_day)
+    u32_t dwDay;
+    request(&dwDay);
+    u32_t dwBuffer[MAX_N][MAX_N];
+    u32_t dwRow, dwColumn;
+    inputArray(dwBuffer, &dwRow, &dwColumn);
+    outputArray(dwBuffer, &dwRow, &dwColumn);
+    u32_t dwResult;
+    switch (dwDay)
     {
     case MONDAY:
-        dw_Result = Count_prime_Array(dw_Buffer, &dw_Row, &dw_Column);
-        printf("\nSo luong so nguyen to trong mang 2 chieu la:  %d", dw_Result);
+        dwResult = countPrimeArray(dwBuffer, &dwRow, &dwColumn);
+        printf("\nSo luong so nguyen to trong mang 2 chieu la:  %d", dwResult);
         break;
     case TUESDAY:
-        dw_Result = Count_perfect_square_Array(dw_Buffer, &dw_Row, &dw_Column);
-        printf("\nSo luong so chinh phuong trong mang 2 chieu la: %d", dw_Result);
+        dwResult = countPerfectSquareArray(dwBuffer, &dwRow, &dwColumn);
+        printf("\nSo luong so chinh phuong trong mang 2 chieu la: %d", dwResult);
         break;
     case WEDNESDAY:
-        dw_Result = Count_perfect_Array(dw_Buffer, &dw_Row, &dw_Column);
-        printf("\nSo luong so hoan hao trong mang 2 chieu la: %d", dw_Result);
+        dwResult = countPerfectArray(dwBuffer, &dwRow, &dwColumn);
+        printf("\nSo luong so hoan hao trong mang 2 chieu la: %d", dwResult);
         break;
     case THURSDAY:
-        dw_Result = Count_even_Array(dw_Buffer, &dw_Row, &dw_Column);
-        printf("\nSo luong so chan trong mang 2 chieu la: %d", dw_Result);
+        dwResult = countEvenArray(dwBuffer, &dwRow, &dwColumn);
+        printf("\nSo luong so chan trong mang 2 chieu la: %d", dwResult);
         break;
     case FRIDAY:
-        dw_Result = Count_odd_Array(dw_Buffer, &dw_Row, &dw_Column);
-        printf("\nSo luong so le trong mang 2 chieu la: %d", dw_Result);
+        dwResult = countOddArray(dwBuffer, &dwRow, &dwColumn);
+        printf("\nSo luong so le trong mang 2 chieu la: %d", dwResult);
         break;
     case SATURDAY:
-        dw_Result = Count_zero_Array(dw_Buffer, &dw_Row, &dw_Column);
-        printf("\nSo luong so 0 trong mang 2 chieu la: %d", dw_Result);
+        dwResult = countZeroArray(dwBuffer, &dwRow, &dwColumn);
+        printf("\nSo luong so 0 trong mang 2 chieu la: %d", dwResult);
         break;
     case SUNDAY:
-        dw_Result = Count_one_Array(dw_Buffer, &dw_Row, &dw_Column);
-        printf("\nSo luong so 1 trong mang 2 chieu la: %d", dw_Result);
+        dwResult = Count_one_Array(dwBuffer, &dwRow, &dwColumn);
+        printf("\nSo luong so 1 trong mang 2 chieu la: %d", dwResult);
         break;
     }
 }
 
-void_t Input_Array(u32_t pdwBuffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
+void_t inputArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn)
 {
     // Input number of rows and check
     do
     {
         printf("\nNhap vao so dong: ");
-        scanf("%d", pdw_Row);
+        scanf("%d", pdwRow);
 
-        if (*pdw_Row < 1 || *pdw_Row > MAX_N)
+        if (*pdwRow < 1 || *pdwRow > MAX_N)
         {
             printf("\nSo dong khong hop le. Xin kiem tra lai!");
         }
 
-    } while (*pdw_Row < 1 || *pdw_Row > MAX_N);
+    } while (*pdwRow < 1 || *pdwRow > MAX_N);
 
     // Input number of columns and check
     do
     {
         printf("\nNhap vao so cot: ");
-        scanf("%d", pdw_Column);
+        scanf("%d", pdwColumn);
 
-        if (*pdw_Column < 1 || *pdw_Column > MAX_N)
+        if (*pdwColumn < 1 || *pdwColumn > MAX_N)
         {
             printf("\nSo cot khong hop le. Xin kiem tra lai!");
         }
 
-    } while (*pdw_Column < 1 || *pdw_Column > MAX_N);
-    for (u32_t i = 0; i < *pdw_Row; i++)
+    } while (*pdwColumn < 1 || *pdwColumn > MAX_N);
+    for (u32_t i = 0; i < *pdwRow; i++)
     {
-        for (u32_t j = 0; j < *pdw_Column; j++)
+        for (u32_t j = 0; j < *pdwColumn; j++)
         {
             printf("\nNhap Buffer[%d][%d] = ", i, j);
             scanf("%d", &pdwBuffer[i][j]);
@@ -203,54 +203,54 @@ void_t Input_Array(u32_t pdwBuffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
     }
 }
 
-void_t Output_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
+void_t outputArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn)
 {
-    for (u32_t i = 0; i < *pdw_Row; i++)
+    for (u32_t i = 0; i < *pdwRow; i++)
     {
-        for (u32_t j = 0; j < *pdw_Column; j++)
+        for (u32_t j = 0; j < *pdwColumn; j++)
         {
-            printf("%4d", pdw_Buffer[i][j]);
+            printf("%4d", pdwBuffer[i][j]);
         }
         printf("\n\n");
     }
 }
 
-u32_t Check_Prime(u32_t dw_prime)
+u32_t checkPrime(u32_t dwPrime)
 {
-    if (dw_prime == 2) // Neu la so 2 thi chung to la so nguyen to luon
+    if (dwPrime == 2) // Neu la so 2 thi chung to la so nguyen to luon
         return 1;
-    u32_t dw_sqrt_prime = sqrt(dw_prime); // Lay can bac 2 cua so can kiem tra
-    for (u32_t i = 2; i <= sqrt(dw_prime); i++)
-        if (dw_prime % i == 0)
+    u32_t dwSqrtPrime = sqrt(dwPrime); // Lay can bac 2 cua so can kiem tra
+    for (u32_t i = 2; i <= sqrt(dwPrime); i++)
+        if (dwPrime % i == 0)
             return 1;
     return 0;
 }
 
-u32_t Count_prime_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
+u32_t countPrimeArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn)
 {
-    u32_t dw_Count_prime = 0;
-    for (u32_t i = 0; i < *pdw_Row; i++)
+    u32_t dwCountPrime = 0;
+    for (u32_t i = 0; i < *pdwRow; i++)
     {
-        for (u32_t j = 0; j < *pdw_Column; j++)
+        for (u32_t j = 0; j < *pdwColumn; j++)
         {
-            if (Check_Prime(pdw_Buffer[i][j]) != 0)
+            if (checkPrime(pdwBuffer[i][j]) != 0)
             {
-                dw_Count_prime++;
+                dwCountPrime++;
             }
         }
     }
-    return dw_Count_prime;
+    return dwCountPrime;
 }
 
-void_t Request(u32_p pdw_day)
+void_t request(u32_p pdwDay)
 {
     printf("Tao 1 mang 2 chieu gom cac phan tu so nguyen khong dau\n");
     printf("Xuat ra man hinh mang 2 chieu vua tao\n");
     printf("Nhap so tu 2-8 tuong ung voi MONDAY-SUNDAY\n");
     printf("Nhap ngay: ");
-    scanf("%d", pdw_day);
+    scanf("%d", pdwDay);
     printf("\n");
-    switch (*pdw_day)
+    switch (*pdwDay)
     {
     case MONDAY:
     {
@@ -297,95 +297,95 @@ void_t Request(u32_p pdw_day)
     }
 }
 
-u32_t Count_perfect_square_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
+u32_t countPerfectSquareArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn)
 {
-    u32_t dw_Count_perfect_square = 0;
-    for (u32_t i = 0; i < *pdw_Row; i++)
+    u32_t dwCountPerfectSquare = 0;
+    for (u32_t i = 0; i < *pdwRow; i++)
     {
-        for (u32_t j = 0; j < *pdw_Column; j++)
+        for (u32_t j = 0; j < *pdwColumn; j++)
         {
-            u32_t dw_sqrt_perfect_square = sqrt(pdw_Buffer[i][j]);
-            if (dw_sqrt_perfect_square * dw_sqrt_perfect_square == pdw_Buffer[i][j])
+            u32_t dwSqrtPerfectSquare = sqrt(pdwBuffer[i][j]);
+            if (dwSqrtPerfectSquare * dwSqrtPerfectSquare == pdwBuffer[i][j])
             {
-                dw_Count_perfect_square++;
+                dwCountPerfectSquare++;
             }
         }
     }
-    return dw_Count_perfect_square;
+    return dwCountPerfectSquare;
 }
 
-u32_t Count_perfect_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
+u32_t countPerfectArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn)
 {
-    u32_t dw_Count_perfect = 0;
-    for (u32_t i = 0; i < *pdw_Row; i++)
+    u32_t dwCountPerfect = 0;
+    for (u32_t i = 0; i < *pdwRow; i++)
     {
-        for (u32_t j = 0; j < *pdw_Column; j++)
+        for (u32_t j = 0; j < *pdwColumn; j++)
         {
-            u32_t dw_sum_divisor = 0;
-            for (u32_t k = 1; k < pdw_Buffer[i][j]; k++)
+            u32_t dwSumDivisor = 0;
+            for (u32_t k = 1; k < pdwBuffer[i][j]; k++)
             {
-                if (pdw_Buffer[i][j] % k == 0)
-                    dw_sum_divisor += pdw_Buffer[i][j];
+                if (pdwBuffer[i][j] % k == 0)
+                    dwSumDivisor += pdwBuffer[i][j];
             }
-            if (dw_sum_divisor == pdw_Buffer[i][j]) // Kiem tra tong cac uoc cua so do co bang so do khong?
-                dw_Count_perfect++;
+            if (dwSumDivisor == pdwBuffer[i][j]) // Kiem tra tong cac uoc cua so do co bang so do khong?
+                dwCountPerfect++;
         }
     }
-    return dw_Count_perfect++;
+    return dwCountPerfect++;
 }
 
-u32_t Count_even_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
+u32_t countEvenArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn)
 {
-    u32_t dw_Count_even = 0;
-    for (u32_t i = 0; i < *pdw_Row; i++)
+    u32_t dwCountEven = 0;
+    for (u32_t i = 0; i < *pdwRow; i++)
     {
-        for (u32_t j = 0; j < *pdw_Column; j++)
+        for (u32_t j = 0; j < *pdwColumn; j++)
         {
-            if (pdw_Buffer[i][j] % 2 == 0)
-                dw_Count_even++;
+            if (pdwBuffer[i][j] % 2 == 0)
+                dwCountEven++;
         }
     }
-    return dw_Count_even;
+    return dwCountEven;
 }
 
-u32_t Count_odd_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
+u32_t countOddArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn)
 {
-    u32_t dw_Count_odd = 0;
-    for (u32_t i = 0; i < *pdw_Row; i++)
+    u32_t dwCountOdd = 0;
+    for (u32_t i = 0; i < *pdwRow; i++)
     {
-        for (u32_t j = 0; j < *pdw_Column; j++)
+        for (u32_t j = 0; j < *pdwColumn; j++)
         {
-            if (pdw_Buffer[i][j] % 2 != 0)
-                dw_Count_odd++;
+            if (pdwBuffer[i][j] % 2 != 0)
+                dwCountOdd++;
         }
     }
-    return dw_Count_odd;
+    return dwCountOdd;
 }
 
-u32_t Count_zero_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
+u32_t countZeroArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn)
 {
-    u32_t dw_Count_zero = 0;
-    for (u32_t i = 0; i < *pdw_Row; i++)
+    u32_t dwCountZero = 0;
+    for (u32_t i = 0; i < *pdwRow; i++)
     {
-        for (u32_t j = 0; j < *pdw_Column; j++)
+        for (u32_t j = 0; j < *pdwColumn; j++)
         {
-            if (pdw_Buffer[i][j] == 0)
-                dw_Count_zero++;
+            if (pdwBuffer[i][j] == 0)
+                dwCountZero++;
         }
     }
-    return dw_Count_zero;
+    return dwCountZero;
 }
 
-u32_t Count_one_Array(u32_t pdw_Buffer[][MAX_N], u32_p pdw_Row, u32_p pdw_Column)
+u32_t countOneArray(u32_t pdwBuffer[][MAX_N], u32_p pdwRow, u32_p pdwColumn)
 {
-    u32_t dw_Count_one = 0;
-    for (u32_t i = 0; i < *pdw_Row; i++)
+    u32_t dwCountOne = 0;
+    for (u32_t i = 0; i < *pdwRow; i++)
     {
-        for (u32_t j = 0; j < *pdw_Column; j++)
+        for (u32_t j = 0; j < *pdwColumn; j++)
         {
-            if (pdw_Buffer[i][j] == 1)
-                dw_Count_one++;
+            if (pdwBuffer[i][j] == 1)
+                dwCountOne++;
         }
     }
-    return dw_Count_one;
+    return dwCountOne;
 }
